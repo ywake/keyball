@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB   , KC_QUOT  , KC_COMM  , KC_DOT   , KC_P     , KC_Y     ,                                  KC_F     , KC_G     , KC_C     , KC_R     , KC_L     , _______  ,
     MY_LGUI  , KC_A     , KC_O     , KC_E     , KC_U     , KC_I     ,                                  KC_D     , KC_H     , KC_T     , KC_N     , KC_S     , KC_MINS  ,
     KC_LSFT  , KC_SLSH  , KC_Q     , KC_J     , KC_K     , KC_X     , KC_LBRC  ,            KC_RBRC  , KC_B     , KC_M     , KC_W     , KC_V     , KC_Z     , _______  ,
-    MO(CNTRL), TG(QWER) , MY_LCTL  , KC_LALT  , MY_LNG2 , MY_SPC    , MY_LNG1  ,            MY_ENT   , KC_BSPC  , _______  , _______  , _______  , KC_RALT  , _______
+    MO(CNTRL), TG(QWER) , MY_LCTL  , KC_LALT  , MY_LNG2  , MY_SPC   , MY_LNG1  ,            MY_ENT   , KC_BSPC  , _______  , _______  , _______  , KC_RALT  , _______
   ),
 
   [QWER] = LAYOUT_universal(
@@ -56,17 +56,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [SYMBL] = LAYOUT_universal(
     KC_PWR   , KC_F1    , KC_F2    , KC_F3    , KC_F4    , KC_F5    ,                                  KC_F6    , KC_F7    , KC_F8    , KC_F9    , KC_F10   , KC_F11   ,
-    _______  , _______  , S(KC_7)  , S(KC_8)  , S(KC_9)  , S(KC_0)  ,                                  _______  , KC_BSLS  , KC_EQL   , KC_MINS  , KC_BSLS  , KC_F12   ,
-    _______  , _______  , S(KC_4)  , S(KC_5)  , S(KC_6)  ,S(KC_MINS),                                  _______  , KC_SCLN  , KC_LBRC  , KC_RBRC  , KC_GRV   , _______  ,
-    _______  , _______  , S(KC_1)  , S(KC_2)  , S(KC_3)  , S(KC_EQL), _______  ,            _______  , _______  , _______  , _______  , _______  , _______  , _______  ,
+    KC_ESC   , KC_F12   , KC_F7    , KC_F8    , KC_F9    , _______  ,                                  _______  , KC_ASTR  , KC_EQL   , KC_MINS  , KC_BSLS  , KC_F12   ,
+    _______  , KC_F11   , KC_F4    , KC_F5    , KC_F6    , _______  ,                                  _______  , KC_SCLN  , KC_LBRC  , KC_RBRC  , KC_GRV   , _______  ,
+    _______  , KC_F10   , KC_F1    , KC_F2    , KC_F3    , _______  , _______  ,            _______  , _______  , _______  , KC_LPRN  , KC_RPRN  , _______  , _______  ,
     _______  , _______  , _______  , _______  , _______  , _______  , _______  ,            _______  , KC_DEL   , _______  , _______  , _______  , _______  , _______
   ),
 
   [MOUSE] = LAYOUT_universal(
     _______  , _______  , _______  , _______  , _______  , _______  ,                                  _______  , _______  , _______  , _______  , _______  , _______  ,
-    _______  , _______  , KC_7     , KC_8     , KC_9     , KC_0     ,                                  KC_PGUP  , KC_HOME  , KC_UP    , KC_END   , _______  , _______  ,
-    _______  , _______  , KC_4     , KC_5     , KC_6     , KC_MINS  ,                                  KC_PGDN  , KC_LEFT  , KC_DOWN  , KC_RGHT  , _______  , _______  ,
-    _______  , _______  , KC_1     , KC_2     , KC_3     , KC_EQL   , _______  ,            _______  , _______  , KC_BTN1  , KC_BTN2  , KC_BTN3  , _______  , _______  ,
+    KC_PWR   , _______  , KC_7     , KC_8     , KC_9     , _______  ,                                  KC_PGUP  , KC_HOME  , KC_UP    , KC_END   , _______  , _______  ,
+    _______  , _______  , KC_4     , KC_5     , KC_6     , _______  ,                                  KC_PGDN  , KC_LEFT  , KC_DOWN  , KC_RGHT  , _______  , _______  ,
+    _______  , KC_0     , KC_1     , KC_2     , KC_3     , _______  , _______  ,            _______  , _______  , KC_BTN1  , KC_BTN2  , KC_BTN3  , _______  , _______  ,
     _______  , _______  , _______  , _______  , _______  , _______  , _______  ,            _______  , KC_DEL   , _______  , _______  , _______  , _______  , _______
   ),
 
