@@ -56,14 +56,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [MOUSE] = LAYOUT_universal(
     KC_ESC   , KC_F10   , KC_F1    , KC_F2    , KC_F3    , _______  ,            KC_PGUP  , KC_HOME  , KC_UP    , KC_END   , _______  , _______  ,
     _______  , KC_F11   , KC_F4    , KC_F5    , KC_F6    , _______  ,            KC_PGDN  , KC_LEFT  , KC_DOWN  , KC_RGHT  , _______  , _______  ,
-    _______  , KC_F12   , KC_F7    , KC_F8    , KC_F9    , _______  ,            _______  , KC_BTN1  , KC_BTN2  , KC_BTN3  , _______  , _______  ,
+    _______  , KC_F12   , KC_F7    , KC_F8    , KC_F9    , _______  ,            KC_BTN4  , KC_BTN1  , KC_BTN2  , KC_BTN3  , KC_BTN5  , _______  ,
                _______  , _______  , _______  , _______  , _______  ,            _______  , KC_DEL   , BALL     , BALL     , _______
   ),
 
   [SYMBL] = LAYOUT_universal(
-    _______  , KC_0     , KC_1     , KC_2     , KC_3     , _______  ,            _______  , KC_ASTR  , KC_EQL   , KC_MINS  , KC_BSLS  , _______  ,
+    _______  , KC_0     , KC_1     , KC_2     , KC_3     , _______  ,            _______  , _______  , KC_LBRC  , KC_RBRC  , _______  , _______  ,
     _______  , KC_PDOT  , KC_4     , KC_5     , KC_6     , _______  ,            _______  , KC_SCLN  , KC_LPRN  , KC_RPRN  , KC_GRV   , _______  ,
-    _______  , _______  , KC_7     , KC_8     , KC_9     , _______  ,            _______  , _______  , KC_LBRC  , KC_RBRC  , _______  , _______  ,
+    _______  , _______  , KC_7     , KC_8     , KC_9     , _______  ,            _______  , KC_ASTR  , KC_EQL   , KC_MINS  , KC_BSLS  , _______  ,
                _______  , _______  , _______  , _______  , _______  ,            _______  , KC_DEL   , BALL     , BALL     , _______
   ),
 };
