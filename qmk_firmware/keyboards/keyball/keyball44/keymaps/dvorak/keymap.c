@@ -91,3 +91,37 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_layerinfo();
 }
 #endif
+
+static bool right_click_held = false;
+static bool left_click_held = false;
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case KC_BTN1:
+      if (record->event.pressed) {
+        if (right_click_held) {
+          tap_code16(G(KC_LBRC));
+        } else {
+          left_click_held = true;
+          register_code(KC_BTN1);
+        }
+      } else {
+        left_click_held = false;
+        unregister_code(KC_BTN1);
+      }
+      return false;
+    case KC_BTN2:
+      if (record->event.pressed) {
+        if (left_click_held) {
+          tap_code16(G(KC_RBRC));
+        } else {
+          right_click_held = true;
+          register_code(KC_BTN2);
+        }
+      } else {
+        right_click_held = false;
+        unregister_code(KC_BTN2);
+      }
+      return false;
+  }
+  return true;
+}
