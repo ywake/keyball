@@ -39,3 +39,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define AUTO_MOUSE_DEFAULT_LAYER 1
 
 #define TAPPING_TERM 150
+
+/*
+| Config       | Default | Slowest | Fastest |
+|--------------|---------|---------|---------|
+| Mouse speed  | 500     | 100     | 12000   |
+| Scroll speed | 4       | 128     | 1       |
+ */
+#define KEYBALL_CPI_DEFAULT 1320 // マウス速度 (100~12000 default: 500)
+#define KEYBALL_SCROLL_DIV_DEFAULT 6 // スクロール速度 ([fast]1~128[slow] default: 4)
