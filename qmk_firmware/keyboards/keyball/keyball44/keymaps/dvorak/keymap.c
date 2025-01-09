@@ -41,6 +41,7 @@ enum keymap_layer
 #define PREV    (G(S(KC_TAB)))
 #define NEXT    (G(KC_TAB))
 #define MIS_CON (C(KC_UP)) // Mission Control
+#define MY_POWR (KC_KB_POWER)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -67,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [SYMBL] = LAYOUT_universal(
-    _______ , KC_0    , KC_1    , KC_2    , KC_3    , G(KC_X) ,                               KC_CIRC , KC_AMPR , KC_LBRC , KC_RBRC , KC_PIPE , _______ ,
+    MY_POWR , KC_0    , KC_1    , KC_2    , KC_3    , G(KC_X) ,                               KC_CIRC , KC_AMPR , KC_LBRC , KC_RBRC , KC_PIPE , _______ ,
     RESERVE , KC_PDOT , KC_4    , KC_5    , KC_6    , G(KC_C) ,                               KC_HASH , KC_SCLN , KC_LPRN , KC_RPRN , KC_GRV  , _______ ,
     RESERVE , XXXXXXX , KC_7    , KC_8    , KC_9    , G(KC_V) ,                               KC_DLR  , KC_ASTR , KC_EQL  , KC_MINS , KC_BSLS , RESERVE ,
                         RESERVE , RESERVE , RESERVE , RESERVE , RESERVE ,           RESERVE , KC_DEL  ,           BALL    , BALL    , RESERVE
