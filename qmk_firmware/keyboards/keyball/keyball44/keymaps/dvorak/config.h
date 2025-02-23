@@ -46,5 +46,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 | Mouse speed  | 500     | 100     | 12000   |
 | Scroll speed | 4       | 128     | 1       |
  */
-#define KEYBALL_CPI_DEFAULT 1320 // マウス速度 (100~12000 default: 500)
+#define KEYBALL_CPI_DEFAULT 1000 // マウス速度 (100~12000 default: 500)
 #define KEYBALL_SCROLL_DIV_DEFAULT 6 // スクロール速度 ([fast]1~128[slow] default: 4)
