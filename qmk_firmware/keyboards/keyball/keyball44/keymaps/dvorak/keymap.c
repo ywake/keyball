@@ -48,9 +48,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // keymap for default (VIA)
   [DVOR] = LAYOUT_universal(
     KC_TAB  , KC_QUOT , KC_COMM , KC_DOT  , KC_P    , KC_Y    ,                               KC_F    , KC_G    , KC_C    , KC_R    , KC_L    , _______ ,
-    MY_LGUI , KC_A    , KC_O    , KC_E    , KC_U    , KC_I    ,                               KC_D    , KC_H    , KC_T    , KC_N    , KC_S    , KC_MINS ,
+    MY_LCTL , KC_A    , KC_O    , KC_E    , KC_U    , KC_I    ,                               KC_D    , KC_H    , KC_T    , KC_N    , KC_S    , KC_MINS ,
     KC_LSFT , KC_SLSH , KC_Q    , KC_J    , KC_K    , KC_X    ,                               KC_B    , KC_M    , KC_W    , KC_V    , KC_Z    , KC_RSFT ,
-                        MY_LCTL , KC_LALT , MY_LNG2 , MY_SPC  , MY_LNG1 ,           MY_ENT  , KC_BSPC ,           BALL    , BALL    , TG(QWER)
+                        MY_LGUI , KC_LALT , MY_LNG2 , MY_SPC  , MY_LNG1 ,           MY_ENT  , KC_BSPC ,           BALL    , BALL    , TG(QWER)
   ),
 
   [QWER] = LAYOUT_universal(
