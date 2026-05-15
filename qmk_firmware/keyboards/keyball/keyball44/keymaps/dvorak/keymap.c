@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 
 #include "quantum.h"
+#include "print.h"
 
 enum keymap_layer
 {
@@ -95,32 +96,51 @@ void oledkit_render_info_user(void) {
 
 static bool right_click_held = false;
 static bool left_click_held = false;
+static bool right_click_combo = false;
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case KC_BTN1:
       if (record->event.pressed) {
         if (right_click_held) {
-          tap_code16(G(KC_LBRC));
+          // 右クリック保持中に左クリック → 「戻る」（右クリックは送らない）
+          right_click_combo = true;
+          uprintf("BTN1+BTN2: back (C(KC_LBRC))\n");
+          tap_code16(C(KC_LBRC));
         } else {
+          uprintf("BTN1: press\n");
           left_click_held = true;
           register_code(KC_BTN1);
         }
       } else {
-        left_click_held = false;
-        unregister_code(KC_BTN1);
+        if (left_click_held) {
+          uprintf("BTN1: release\n");
+          left_click_held = false;
+          unregister_code(KC_BTN1);
+        }
       }
       return false;
     case KC_BTN2:
       if (record->event.pressed) {
         if (left_click_held) {
-          tap_code16(G(KC_RBRC));
+          // 左クリック保持中に右クリック → 「進む」
+          left_click_held = false;
+          unregister_code(KC_BTN1);
+          uprintf("BTN2+BTN1: forward (C(KC_RBRC))\n");
+          tap_code16(C(KC_RBRC));
         } else {
+          uprintf("BTN2: press (pending)\n");
           right_click_held = true;
-          register_code(KC_BTN2);
+          right_click_combo = false;
+          // コンテキストメニューを出さないため右クリックはここでは送らない
         }
       } else {
+        if (right_click_held && !right_click_combo) {
+          // コンボなし → 通常の右クリックとして送る
+          uprintf("BTN2: release -> tap right click\n");
+          tap_code(KC_BTN2);
+        }
         right_click_held = false;
-        unregister_code(KC_BTN2);
+        right_click_combo = false;
       }
       return false;
   }
